@@ -1,0 +1,20 @@
+<div class="indexsearch">
+<center>
+<img src="{$url}/images/logo.png" />
+
+<form action="" method="get" onsubmit="document.location='{$url}/index.php?a=search&q='+document.getElementById('q').value;return false;">
+<input type="text" id="q" value="" size="50" />
+<input type="submit" value="Search" />
+</form>
+
+</center>
+</div>
+
+{$ad1}
+
+<div class="indexTop">
+	<div class="indexTopTitle">
+	Top 15 searches
+	</div>
+	<ol>{$rows}</ol>
+</div>

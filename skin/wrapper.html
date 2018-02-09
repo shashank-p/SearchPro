@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{$header}
+<title>{$title}</title>
+{$description}
+<meta name="google-site-verification" content="QgoBcQh1N6hNfArQ2NtHztZVCMWbAdHIfDzP7tC05Vw" />
+<link rel="shortcut icon" href="./favicon.ico" />
+<link href="{$url}/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="{$url}/js/jquery.js"></script>
+<script type="text/javascript" src="{$url}/js/jquery.tipsy.js"></script>
+<script src="{$url}/js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function() {
+	$('#search').keypress(function(x){if(x.keyCode==13){q=$(this).val();if(q!=this.defaultValue){document.location='/index.php?a=search&q='+escape(q)}}});
+	$('#search').focus(function(){if($(this).val()==this.defaultValue)$(this).val('')});
+	$('#search').blur(function(){if($(this).val()=='')$(this).val(this.defaultValue)});
+	
+	$('#q').keypress(function(x){if(x.keyCode==13){q=$(this).val();if(q!=this.defaultValue){document.location='/index.php?a=search&q='+escape(q)}}});
+	$('#q').focus(function(){if($(this).val()==this.defaultValue)$(this).val('')});
+	$('#q').blur(function(){if($(this).val()=='')$(this).val(this.defaultValue)});
+	
+	$('.button, .avatar').tipsy({gravity:'w', fade:1, html: true, opacity: 1});
+});
+</script>
+</head>
+<body>
+<div id="header">
+	<div class="logo">
+		<a href="{$url}"><img src="{$url}/images/{$logo}.png" /></a><br />
+	</div>
+{$search}
+</div>
+<div id="{$contentStyle}">
+{$content}
+</div>
+<div class="footer">
+	<div class="footerPadding">
+	Copyright &copy; 2017 {$footer}. All rights reserved.
+	<a href="{$url}/tos" target="_blank">Terms and Conditions</a> - <a href="{$url}/privacy" target="_blank">Privacy Policy</a> - <a href="{$url}/disclaimer" target="_blank">Disclaimer</a> - <a href="{$url}/contact" target="_blank">Contact</a> - <a href="{$url}/index.php?a=admin">Admin</a>
+	</div>
+</div>
+</body>
+</html>

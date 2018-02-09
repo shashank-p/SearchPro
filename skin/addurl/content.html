@@ -1,0 +1,21 @@
+{$error}
+{$success}
+
+<div class="addurlContent">
+Enter a domain to be crawled:<br />
+<form action="{$url}/index.php?a=addurl" method="post">
+URL: <input type="text" name="url" />
+<input type="submit" />
+</form>
+<div class="addurlSmall">You must add the full URL including the prefix, example: <strong>http://example.org</strong></div>
+</div>
+
+<div class="addurlContent">
+Enter a domain to be crawled, it will crawl the external links too (slower method, it might take a few minutes):<br />
+<form action="{$url}/index.php?a=addurl" method="post">
+URL: <input type="text" name="urls" />
+<input type="submit" />
+</form>
+<div class="addurlSmall">You must add the full URL including the prefix, example: <strong>http://example.org</strong></div>
+</div>
+<div class="addurlContent">Note: In some certain cases it might take a few minutes until we finish crawling the website submitted.</div>

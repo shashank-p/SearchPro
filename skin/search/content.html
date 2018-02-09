@@ -1,0 +1,34 @@
+<div class="searchSidebar">
+<ul>
+	<li><a href="#">Web</a></li>
+</ul>
+<div class="underlineFilter"><strong>Filters</strong></div>
+<ul>
+	<li class="button" 
+	title="Match both <strong>keyword1</strong> and <strong>keyword2</strong><br /><despartitor></despartitor>e.g: Rakesh Shashank">
+	<a href="{$url}/index.php?a=search&q={$query}&f=1{$o}">Match</a></li>
+	
+	<li class="button" title="Match <strong>keyword1</strong> but not <strong>keyword2</strong><br /><despartitor></despartitor>e.g: Rakesh Shashank<br /><despartitor></despartitor>It will remove the results containing the word Alexandru<br />">
+	<a href="{$url}/index.php?a=search&q={$query}&f=2{$o}">Exclude</a></li>
+	
+	<li class="button" title="Match <strong>keyword1</strong>, but mark down as less relevant results containing <strong>keyword2</strong>.<br /><despartitor></despartitor>e.g: Rakesh Shashank<br />">
+	<a href="{$url}/index.php?a=search&q={$query}&f=3{$o}">Less Relevant</a></li>
+	
+	<li class="button" title="Match the exact term &quot;<strong>keyword1</strong> <strong>keyword2</strong>&quot;<br /><despartitor></despartitor>e.g: Rakesh Shashank<br /><despartitor></despartitor>It will display only results wich contains strictly the specified keywords.">
+	<a href="{$url}/index.php?a=search&q={$query}&f=4{$o}">Exact match</a></li>
+</ul>
+<div class="underlineFilter"><strong>Sort by</strong></div>
+<ul>
+	<li class="button" title="Order the results from the less relevant, to the most relevant.">
+	<a href="{$url}/index.php?a=search&q={$query}&o=1{$f}">Ascending</a></li>
+	<li class="button" title="Order the results from the most relevant, to the less relevant <strong>(default)</strong>.">
+	<a href="{$url}/index.php?a=search&q={$query}&o=0{$f}">Descending</a></li>
+</ul>
+</div>
+<div class="searchContent">
+<div class="searchHeader">Showing results for <strong>{$query}</strong> {$filtru} (Load time: {$duration})</div>
+{$ad2}
+	<div class="searchResults">{$rows}{$error}</div>
+	<div class="searchPagination">{$pagination}</div>
+</div>
+{$ad3}
